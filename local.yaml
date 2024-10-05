@@ -1,18 +1,15 @@
 proxies:
-  - name: "cleardewy_vpn"
-    type: ss
-    server: 172.203.209.17
-    port: 1107
-    cipher: chacha20-ietf-poly1305
-    password: "040110"
-    udp: true
+  - name: "local_vpn"
+    type: http
+    server: 192.168.0.103
+    port: 9099
 
 # 代理组配置
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
-      - "cleardewy_vpn"
+      - "local_vpn"
 
 dns:
   enable: true
