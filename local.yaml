@@ -1,0 +1,25 @@
+proxies:
+  - name: "local_vpn"
+    type: http
+    server: 192.168.0.103
+    port: 9099
+
+# 代理组配置
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "local_vpn"
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip # 或者使用 redir-host
+  nameserver:
+    - "8.8.8.8"
+    - "1.1.1.1"
+    - "114.114.114.114"
+    - "8.8.4.4"
+
+rules:
+    - 'MATCH,Proxy'
