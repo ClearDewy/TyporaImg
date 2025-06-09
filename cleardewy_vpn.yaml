@@ -8,10 +8,10 @@ external-controller: '127.0.0.1:9090'
 proxies:
   - name: "cleardewy_vpn"
     type: ss
-    server: 172.203.209.17
-    port: 1107
+    server: 20.189.249.196
+    port: 8388
     cipher: chacha20-ietf-poly1305
-    password: "040110"
+    password: "vpn"
     udp: true
 
 # 代理组配置
