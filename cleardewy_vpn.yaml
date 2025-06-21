@@ -8,7 +8,7 @@ external-controller: '127.0.0.1:9090'
 proxies:
   - name: "cleardewy_vpn"
     type: ss
-    server: 20.189.249.196
+    server: 20.18.161.13
     port: 8388
     cipher: chacha20-ietf-poly1305
     password: "vpn"
